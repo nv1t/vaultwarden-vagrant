@@ -3,9 +3,10 @@ set -eux
 apt-get -y update 
 apt-get -y upgrade
 
-# Generating Directories
-mkdir -p /opt/vaultwarden/
-ln -s /vagrant/data /opt/vaultwarden/ || echo 'File exists'
+useradd -s /bin/false -d /opt/vaultwarden/ -m vaultwarden
+
+# Generating needed Directories
+mkdir -p /opt/vaultwarden/data
 
 # Install Dependencies for building vaultwarden from source
 apt-get -y install cargo 
