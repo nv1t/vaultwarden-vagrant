@@ -8,6 +8,9 @@ It uses caddy as a reverse proxy and forwards port 8080.
 
 It uses VirtualBox as a provider and modifies the memory and cpu cores to use 4096 RAM and 2 CPUs.
 
+> :warning: **Security**: It does not support TLS at the moment. Caddy is only used to access vaultwarden, which listens on localhost. 
+
+
 # Installation
 
 ```bash
